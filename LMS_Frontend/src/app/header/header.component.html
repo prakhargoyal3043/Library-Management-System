@@ -1,0 +1,28 @@
+<header class="header">
+  <div [routerLink]="getRouteBasedOnToken()" class="logo">
+    <img src="../assets/images/logo.jpg" alt="Logo">  
+    <div class="appname">
+      <h1>LMS</h1>
+    </div>
+  </div>
+  <div class="search-and-home">
+    <div class="search-bar">
+      <!-- Ensure to cast $event.target as HTMLInputElement -->
+      <!-- <input type="text" placeholder="Search books..." (input)=""> -->
+      <input type="text" placeholder="Search books..." [(ngModel)] = "searchTerm" (input)="fetchBooks()">
+
+      <!-- Display search results dynamically -->
+      <ul class="search-results" *ngIf="searchResults.length > 0">
+        <li *ngFor="let book of searchResults">
+          <!-- Ensure routerLink binding is correct -->
+          <a [routerLink]="['/show-book', book.bookId]" (click)="clearSearchResults()">{{ book.bookName }}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="user-actions">
+    <button  *ngIf = "isUser()" routerLink="/return">Return Book</button>
+    <button *ngIf="!isLoggedIn()" routerLink="/login">Login</button>
+    <button *ngIf="isLoggedIn()" (click)="logout()">Logout</button>
+  </div>
+</header>

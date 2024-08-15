@@ -1,0 +1,90 @@
+<div class="register-container">
+  <!-- Registration form -->
+  <div class="registration-form">
+    <h2>Registration Form</h2>
+    <form (ngSubmit)="register()" #registrationForm="ngForm">
+
+      <!-- COMMENT THIS FOR NORAML USE -->
+      <!-- <div class="form-group">
+        <mat-form-field appearance="outline">
+          <mat-label>USER ID</mat-label>
+          <input matInput type="text" id="userId" name="userId" [(ngModel)]="userDetails.userId" required>
+          <mat-error *ngIf="registrationForm.controls['userId'].invalid && (registrationForm.controls['userId'].dirty || registrationForm.controls['userId'].touched)">
+           UserID is required.
+          </mat-error>
+        </mat-form-field>
+      </div> -->
+
+
+      <div class="form-group">
+        <mat-form-field appearance="outline">
+          <mat-label>Name</mat-label>
+          <input matInput type="text" id="name" name="name" [(ngModel)]="userDetails.userName" required>
+          <mat-error *ngIf="registrationForm.controls['name'].invalid && (registrationForm.controls['name'].dirty || registrationForm.controls['name'].touched)">
+           Name is required.
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="form-group">
+        <mat-form-field appearance="outline">
+          <mat-label>Address</mat-label>
+          <input matInput type="text" id="address" name="address" [(ngModel)]="userDetails.userAddress" required>
+          <mat-error *ngIf="registrationForm.controls['address'].invalid && (registrationForm.controls['address'].dirty || registrationForm.controls['address'].touched)">
+           Address is required.
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="form-group">
+        <mat-form-field appearance="outline">
+          <mat-label>Phone Number</mat-label>
+          <input matInput type="tel" id="phone" name="phone" [(ngModel)]="userDetails.userPhoneNumber" required pattern="[0-9]{10}">
+          <mat-error *ngIf="registrationForm.controls['phone'].invalid && (registrationForm.controls['phone'].dirty || registrationForm.controls['phone'].touched)">
+            Phone number is required and must be 10 digits.
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="form-group">
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput type="email" id="email" name="email" [(ngModel)]="userDetails.userEmail" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+          <mat-error *ngIf="registrationForm.controls['email'].hasError('required') && (registrationForm.controls['email'].dirty || registrationForm.controls['email'].touched)">
+            Email is required.
+          </mat-error>
+          <mat-error *ngIf="registrationForm.controls['email'].hasError('pattern') && (registrationForm.controls['email'].dirty || registrationForm.controls['email'].touched)">
+            Please enter a valid email address.
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="form-group">
+        <mat-form-field appearance="outline">
+          <mat-label>Aadhar Number</mat-label>
+          <input matInput type="text" id="aadhar" name="aadhar" [(ngModel)]="userDetails.userGovId" required pattern="[0-9]{12}">
+          <mat-error *ngIf="registrationForm.controls['aadhar'].invalid && (registrationForm.controls['aadhar'].dirty || registrationForm.controls['aadhar'].touched)">
+            Aadhar number is required and must be 12 digits.
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="form-group">
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" id="password" name="password" [(ngModel)]="userDetails.userPassword" required minlength="8">
+          <mat-error *ngIf="registrationForm.controls['password'].hasError('required') && (registrationForm.controls['password'].dirty || registrationForm.controls['password'].touched)">
+            Password is required.
+          </mat-error>
+          <mat-error *ngIf="registrationForm.controls['password'].hasError('minlength') && (registrationForm.controls['password'].dirty || registrationForm.controls['password'].touched)">
+            Password must be at least 8 characters long.
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="form-group">
+        <button mat-raised-button color="primary" type="submit" [disabled]="registrationForm.invalid">Register</button>
+      </div>
+    </form>
+  </div>
+</div>

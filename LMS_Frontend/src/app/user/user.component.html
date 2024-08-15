@@ -1,0 +1,29 @@
+<div *ngIf="users.length">
+  <table>
+    <thead>
+      <tr>
+        <th>User ID</th>
+        <th>Name</th>
+        <th>Books Rented</th>
+        <th>Status</th> <!-- New column header for Status -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.userId }}</td>
+        <td>{{ user.userName }}</td>
+        <td>{{ user.booksRented }}</td>
+        <td>
+          <!-- Display Block or Unblock button based on user.status -->
+          <button class="status-button"
+          (click)="toggleUserStatus(user)">
+    {{ user.userStatus === 1 ? 'Block' : 'Unblock' }}
+  </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div *ngIf="!users.length">
+  No users found.
+</div>

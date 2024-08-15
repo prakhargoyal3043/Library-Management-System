@@ -1,0 +1,36 @@
+<div class="login-container">
+  <!-- Left half with login form -->
+  <div class="left-half">
+    <div class="login-form">
+      <h2>Login</h2>
+      <form (submit)="login()">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" [(ngModel)]="username" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" [(ngModel)]="password" required>
+        </div>
+
+        <div class="form-group">
+          <button type="submit">Login</button>
+        </div>
+
+        <div class="form-group">
+          <p>New user? <a routerLink="/register">Register now</a></p>
+        </div>
+
+        <div class="form-group" *ngIf="errorMessage">
+          <p>{{ errorMessage }}</p>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Right half with image -->
+  <div class="right-half">
+    <img src="../assets/images/login.jpg" alt="Books Image">
+  </div>
+</div>

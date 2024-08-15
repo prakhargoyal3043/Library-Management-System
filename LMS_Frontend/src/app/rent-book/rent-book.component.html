@@ -1,0 +1,21 @@
+
+<h2>Rent Book : {{bookId}}</h2>
+<form (ngSubmit)="submitRentForm()">
+  <mat-form-field appearance="fill">
+    <mat-label>Issue Date</mat-label>
+    <input matInput [matDatepicker]="issueDatePicker" name="issueDate" (dateChange)="onIssueDateChange($event)" [(ngModel)]="issueDate" required>
+    <mat-datepicker-toggle matSuffix [for]="issueDatePicker"></mat-datepicker-toggle>
+    <mat-datepicker #issueDatePicker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Return Date</mat-label>
+    <input matInput [matDatepicker]="returnDatePicker" name="returnDate" (dateChange)="onReturnDateChange($event)" [(ngModel)]="returnDate" required>
+    <mat-datepicker-toggle matSuffix [for]="returnDatePicker"></mat-datepicker-toggle>
+    <mat-datepicker #returnDatePicker></mat-datepicker>
+  </mat-form-field>
+
+  <p>Amount to be paid: {{ rentalAmount | currency:'INR' }}</p>
+
+  <button  mat-raised-button color="primary" type="submit">Pay</button>
+</form>

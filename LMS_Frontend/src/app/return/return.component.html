@@ -1,0 +1,27 @@
+<!-- <h2>Return Books</h2>
+
+<div *ngFor="let book of issuedBooks" class="book-card">
+  <div class="card-content">
+    <img [src]="book.bookImageUrl" alt="{{ book.bookName }}" class="book-image">
+    <h3>{{ book.bookName }}</h3>
+    <p><strong>Book ID:</strong> {{ book.bookId }}</p>
+    <p><strong>Author:</strong> {{ book.bookAuthor }}</p>
+    <p><strong>Publisher:</strong> {{ book.bookPublisher }}</p>
+    <p><strong>Price:</strong> {{ book.bookPrice | currency }}</p>
+    <button mat-raised-button color="accent" (click)="returnBook(book.bookId)">Return</button>
+  </div>
+</div> -->
+
+<h2>Return Books</h2>
+
+<div *ngFor="let book of issuedBooks" class="book-card">
+  <div class="card-content">
+    <img [src]="book.bookImageUrl" alt="{{ book.bookName }}" class="book-image">
+    <h3>{{ book.bookName }}</h3>
+    <p><strong>Book ID:</strong> {{ book.bookId }}</p>
+    <p><strong>Author:</strong> {{ book.bookAuthor }}</p>
+    <p><strong>Publisher:</strong> {{ book.bookPublisher }}</p>
+    <button mat-raised-button color="accent" (click)="returnBook(book.bookId)">Return</button>
+  </div>
+</div>
+

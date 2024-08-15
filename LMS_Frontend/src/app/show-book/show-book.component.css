@@ -1,0 +1,70 @@
+.show-book-container {
+    display: flex;
+  }
+  
+  .left-section {
+    flex: 1;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+  }
+  
+  .right-section {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .book-cover {
+    max-width: 200px;
+    margin-bottom: 10px;
+  }
+  
+  .right-section h3 {
+    margin-top: 0;
+  }
+  
+  .right-section p {
+    margin-bottom: 5px;
+  }
+  
+  .edit-button {
+    background-color: #0d1722;
+    color: #fff;
+    border: none;
+    padding: 8px 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+    width: 100px;
+  }
+
+  .delete-button {
+    background-color: #0d1722;
+    color: #fff;
+    border: none;
+    padding: 8px 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+    width: 100px;
+    margin-left: 30px;
+  }
+  
+  .edit-button:hover {
+    background-color: #0056b3;
+  }
+
+  .rent-button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .rent-button[disabled] {
+    background-color: #6c757d;
+    cursor: not-allowed;
+  }
+  
+  

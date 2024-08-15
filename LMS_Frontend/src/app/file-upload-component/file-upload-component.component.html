@@ -1,0 +1,42 @@
+<div class="upload-container">
+  <div
+    class="drag-drop-area"
+    (dragover)="onDragOver($event)"
+    (drop)="onDrop($event)"
+    (dragleave)="onDragLeave($event)"
+  >
+    <p>Drag and drop your Excel file here, or click to browse</p>
+    <input type="file" (change)="onFileSelect($event)" />
+  </div>
+  
+  <div>
+    <!-- Show "Send to DB" button only if fileData is not empty -->
+    <button
+      class="btn btn-primary"
+      (click)="onUpload()"
+      [disabled]="fileData.length === 0 || fileData[0].bookName == null"
+    >
+      Send to DB
+    </button>
+  </div>
+  
+  <div *ngIf="fileData[0].bookName == null">
+    <p [ngStyle]="{'color': 'red'}">Upload a file with vaild data.</p>
+  </div>
+
+  <div *ngIf="fileData && fileData.length > 0 && fileData[0].bookName != null">
+    <h3>Uploaded Data</h3>
+    <ul>
+      <li *ngFor="let book of fileData">
+        <strong>{{ book.bookName }}</strong><br />
+        ISBN: {{ book.bookISBNNo }}<br />
+        Author: {{ book.bookAuthor }}<br />
+        Publisher: {{ book.bookPublisher }}<br />
+        Description: {{ book.bookDescription }}<br />
+        Price: {{ book.bookPrice }}<br />
+        Edition: {{ book.bookEdition }}<br />
+        <hr />
+      </li>
+    </ul>
+  </div>
+</div>

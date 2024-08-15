@@ -1,0 +1,33 @@
+/* Ensure body and html do not scroll */
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow: auto;
+  }
+  
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .app-header {
+    height: 60px; /* Adjust height as per your header's design */
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .content {
+    flex: 1;
+    overflow-y: auto; /* Enables scrolling for the content area */
+    padding: 5px; /* Adjust padding as needed */
+  }
+  
+  .app-footer {
+    height: 40px; /* Adjust height as per your footer's design */
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+  }
+  

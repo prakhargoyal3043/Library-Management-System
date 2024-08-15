@@ -1,0 +1,47 @@
+<div class="hero-section">
+  <div class="category">
+    <div class="categories-buttons">
+      <button 
+        class="category-button" 
+        *ngFor="let category of categories" 
+        [class.selected]="selectedCategory === category"
+        (click)="filterBooksByCategory(category)">
+        {{ category }}
+      </button>
+    </div>
+  </div>
+
+  <div class="recent">
+    <div class="recently-added">
+      <h2>Recently Added Books</h2>
+      <div class="book-list">
+        <div 
+          class="book-card" 
+          *ngFor="let book of filteredBooks" 
+          (click)="navigateToBook(book.bookId)">
+          <div class="book-description">
+            <h3>{{ book.bookName }}</h3>
+            <p>{{ book.bookDescription }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="hero-section2">
+  <div class="card-section">
+    <div class="card-container">
+      <div 
+        class="card" 
+        *ngFor="let book of filteredBooks" 
+        (click)="navigateToBook(book.bookId)">
+        <img [src]="book.bookImageUrl" [alt]="book.bookName" class="card-image">
+        <div class="card-description">
+          <h3>{{ book.bookName }}</h3>
+          <p>{{ book.bookDescription }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

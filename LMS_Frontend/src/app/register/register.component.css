@@ -1,0 +1,76 @@
+/* Adjustments for .register-container */
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120vh; /* Full viewport height */
+  background-size: cover;
+  background-position: center;
+  color: #333; /* Default text color */
+}
+
+/* Styling for .registration-form */
+.registration-form {
+  background-color: rgba(255, 255, 255, 0.9); /* White with slight opacity */
+  padding: 10px; /* Reduced padding */
+  border-radius: 8px;
+  max-width: 400px; /* Adjust width as needed */
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Example box shadow */
+}
+
+.registration-form h2 {
+  margin-bottom: 10px; /* Reduced margin for heading */
+}
+
+.form-group {
+  margin-bottom: 10px; /* Reduced margin between form groups */
+  text-align: left;
+}
+
+.form-group mat-form-field {
+  width: 100%; /* Full width for form fields */
+}
+
+.form-group button {
+  width: 100%; /* Full width for the button */
+  margin-top: 15px; /* Space above the button */
+}
+
+/* Button hover effect */
+.form-group button:hover {
+  background-color: #1b1b1c; /* Darker shade for hover */
+}
+
+/* Styling for form field labels and inputs */
+.mat-form-field {
+  width: 100%;
+}
+
+.mat-form-field-underline {
+  color: #000; /* Example underline color */
+  height: 36px; /* Reduced height for form fields */
+}
+
+/* Adjust label color */
+.mat-form-field-label {
+  color: #000; /* Example label color */
+}
+
+/* Adjust outline color and width */
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  color: #000; /* Example outline color */
+  border-width: 1px; /* Example outline border width */
+}
+
+/* Adjust outline focus color */
+.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+  color: #000; /* Example focus outline color */
+}
+
+/* Styling for error messages */
+.mat-error {
+  font-size: 12px; /* Adjust error message font size */
+  margin-top: 4px; /* Space above error messages */
+}

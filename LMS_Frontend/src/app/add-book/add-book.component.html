@@ -1,0 +1,89 @@
+<div class="add-book-container">
+  
+    
+    <!-- Left section for book details -->
+    <div class="left-section">
+      <h2>Add Book Details</h2>
+      <form (ngSubmit)="saveBook()">
+
+        <!-- Comment this for normal part -->
+        <!-- <div class="form-group">
+          <label for="bookId">Book ID</label>
+          <input type="text" id="bookId" name="bookId" [(ngModel)]="bookToAdd.bookId" required>
+        </div> -->
+
+        <div class="form-group">
+          <label for="isbn">ISBN Number</label>
+          <input type="text" id="isbn" name="isbn" [(ngModel)]="bookToAdd.bookISBNNo" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="bookName">Book Name</label>
+          <input type="text" id="bookName" name="bookName" [(ngModel)]="bookToAdd.bookName" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="author">Author</label>
+          <input type="text" id="author" name="author" [(ngModel)]="bookToAdd.bookAuthor" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="publisher">Publisher</label>
+          <input type="text" id="publisher" name="publisher" [(ngModel)]="bookToAdd.bookPublisher" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="edition">Edition</label>
+          <input type="text" id="edition" name="edition" [(ngModel)]="bookToAdd.bookEdition">
+        </div>
+     <!-- End of left-section -->
+    
+    <!-- Right section for image upload and additional details -->
+    <div class="right-section">
+      <div class="form-group">
+        <label for="edition">Image URL</label>
+          <input type="text" id="imageUrl" name="imageUrl" [(ngModel)]="bookToAdd.bookImageUrl" required="">
+      </div>
+      
+      <div class="form-group">
+        <label for="description">Add Book Description</label>
+        <textarea id="description" name="description" [(ngModel)]="bookToAdd.bookDescription" rows="4" ></textarea>
+      </div>
+      
+      <div class="form-group">
+        <label for="category">Category</label>
+        <select id="category" name="category" [(ngModel)]="bookToAdd.bookCategory">
+          <option value="Fiction">Fiction</option>
+          <option value="Non-fiction">Non-Fiction</option>
+          <option value = "Mystery">Mystery</option>
+          <option value = "Thriller">Thriller</option>
+          <option value = "Romance">Romance</option>
+          <option value = "Science fiction">Science fiction</option>
+          <option value = "Fantasy">Fantasy</option>
+          <option value = "Horror">Horror</option>
+          <option value = "Historical fiction">Historical fiction</option>
+          <option value = "Biography">Biography</option>
+          <option value = "Memoir">Memoir</option>
+          <option value = "Self-help">Self-help</option>
+          <option value = "Business">Business</option>
+          <option value = "Travel">Travel</option>
+          <option value = "Cooking">Cooking</option>
+          <option value = "Health and fitness">Health and fitness</option>
+          <option value = "History">History</option>
+          <option value = "Science">Science</option>
+          <option value = "Mathematics">Mathematics</option>
+          <option value = "Philosophy">Philosophy</option>
+          <!-- Add more options as needed -->
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="price">Book Price</label>
+        <input type="text" id="price" name="price" [(ngModel)]="bookToAdd.bookPrice" required>
+      </div>
+
+      <button type="submit" class="save-button">Save</button>
+    </div> <!-- End of right-section -->
+  </form>
+</div>
+  

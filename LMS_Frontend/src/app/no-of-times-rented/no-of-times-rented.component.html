@@ -1,0 +1,77 @@
+ <!-- <div *ngIf="no.length">
+    <table>
+      <thead>
+        <tr>
+          <th>Book ID</th>
+          <th>No of times rented</th>
+          <th>Pricce</th>
+          <th>Revenue Generated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let n of no">
+          <td>{{ n.bookId }}</td>
+          <td>{{ n.noOfTimes }}</td>
+          <td>{{ n.bookPrice }}</td>
+          <td>{{ n.revenueGenerated }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div *ngIf="!no.length">
+    No users found.
+  </div>
+   -->
+
+<!-- 
+   <div *ngIf="no.length; else noData">
+    <table>
+      <thead>
+        <tr>
+          <th>Book ID</th>
+          <th>No of times rented</th>
+          <th>Price</th>
+          <th>Revenue Generated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let n of no ">
+          <td>{{ n.bookId }}</td>
+          <td>{{ n.noOfTimes }}</td>
+          
+          <td>{{ n.bookPrice }}</td>
+          <td>{{ n.revenueGenerated }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <ng-template #noData>
+    <div>No data found.</div>
+  </ng-template> -->
+
+  <!-- console.log("hello"); -->
+
+  <div *ngIf="no.length; else noData">
+    <table>
+      <thead>
+        <tr>
+          <th>Book ID</th>
+          <th>No of times rented</th>
+          <th>Price</th>
+          <th>Revenue Generated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let n of no">
+          <td>{{ n.bookId }}</td>
+          <td>{{ n.noOfTimes }}</td>
+          <td>{{ n.bookPrice }}</td>
+          <td>{{ n.revenueGenerated }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <ng-template #noData>
+    <div>No data found.</div>
+  </ng-template>
+  

@@ -1,0 +1,30 @@
+<div class="show-book-container" *ngIf="book">
+  <!-- Left Section -->
+  <div class="left-section">
+    <img [src]="book.bookImageUrl" alt="Book Cover" class="book-cover">
+    <h2>{{ book.bookName }}</h2>
+    <p><strong>Book ID:</strong> {{ book.bookId }}</p> 
+    <p><strong>ISBN:</strong> {{ book.bookISBNNo }}</p>
+    <p><strong>Author:</strong> {{ book.bookAuthor }}</p>
+    <p><strong>Publisher:</strong> {{ book.bookPublisher }}</p>
+  </div>
+
+  <!-- Right Section -->
+  <div class="right-section">
+    <h3>Description:</h3>
+    <p>{{ book.bookDescription }}</p>
+    <p><strong>Category:</strong> {{ book.bookCategory }}</p>
+    <p><strong>Price:</strong> Rs. {{ book.bookPrice }}</p>
+    <p><strong>Rent Amount:</strong> Rs. {{ book.bookPrice }}</p>
+    <p><strong>Availability:</strong> {{ book.bookStatus ? 'Available' : 'Unavailable' }}</p>
+    <p><strong>Edition:</strong> {{ book.bookEdition }}</p>
+    <p><strong>Location:</strong> {{ book.bookLocation}}</p>
+
+    <!-- Edit Button (conditionally shown based on user permissions) -->
+    <!-- <button *ngIf="canEdit()" class="edit-button">Edit Book</button> -->
+    <button *ngIf="canDelete()" class="delete-button" (click)="deleteBook()">Delete Book</button>
+    <!-- Rent Button (conditionally shown based on availability) -->
+    <button *ngIf="book.bookStatus && isUser()" [routerLink]="['/rent-book', book.bookId]" class="rent-button">Rent Book</button>
+    <button *ngIf="!book.bookStatus && isUser()" class="rent-button" disabled>Rent Book (Unavailable)</button>
+  </div>
+</div>

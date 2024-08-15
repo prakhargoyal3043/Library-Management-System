@@ -1,0 +1,38 @@
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+  }
+  
+  th {
+    background-color: #f4f4f4;
+  }
+
+
+.status-button {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  color: #333;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.status-button:hover {
+  background-color: #e0e0e0;
+}
+
+.status-button.block {
+  background-color: #ff6347;
+  color: white;
+}
+
+.status-button.block:hover {
+  background-color: #e0482f;
+}

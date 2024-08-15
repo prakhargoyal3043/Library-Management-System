@@ -1,0 +1,11 @@
+/* Optional: Customize form field appearance */
+.mat-form-field {
+    width: 100%;
+    margin-bottom: 15px; /* Adjust spacing between form fields */
+  }
+  
+  /* Optional: Adjust button styles */
+  button[type="submit"] {
+    margin-top: 15px; /* Adjust margin as needed */
+  }
+  

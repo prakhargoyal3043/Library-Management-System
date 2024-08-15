@@ -1,0 +1,272 @@
+.hero-section{
+    width: 100vw;
+    height: 100vh;
+    /* background-color: aqua; */
+    padding: 0;
+    box-sizing: border-box;
+    /* margin-top: -29px; */
+    /* margin-left: -18px; */
+    display: flex;
+    gap: 2rem;
+
+    
+
+}
+.hero-section2{
+    width: 80vw;
+    height: 90vh;
+    
+     /* background-color: #0056b3; */
+
+    /* box-sizing: border-box;
+     margin-top: -24px; 
+    margin-left: -18px;  */
+    margin-right: auto;
+    margin-top:  -320px;
+
+
+   
+}
+.category{
+    height: 200px;
+    width: 850px;
+    /* background-color:  red; */
+    margin-left: 23px;
+    margin-top: 23px;
+
+}
+/* .recentlyAdded{
+    height: 900px;
+    width: 340px;
+    background-color:   yellow;c
+    margin-top: 24px;
+
+} */
+.card-section{
+      /* height: 120px;
+      width: 850px;
+      background-color:  green;
+      margin-left: 24px;
+      margin-top: -360px; */
+      /* display: flex;
+      justify-content: space-between; */
+      display: flex;
+  justify-content: center;
+  /* width: 100%; */
+  margin-left: -90px;  
+
+
+}
+.card-container {
+    /* display: flex;
+    justify-content: space-between;
+    width: 850px;
+    height: 120px;  */
+    /* gap: 1rem; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust gap between cards as needed */
+    justify-content: center;
+    max-width: 850px; /* Adjust the max-width as needed */
+    margin: 0 auto;
+
+    
+}
+
+.card {
+    flex: 0 1 calc(25% - 20px); /* 25% width minus gap for 4 cards in a row */
+    box-sizing: border-box;
+    background-color: white; /* Optional card background color */
+    border: 1px solid #ddd; /* Optional card border */
+    border-radius: 4px; /* Optional card border radius */
+    overflow: hidden; /* Ensure no overflow */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+
+    /* gap: 12rem; */
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-image {
+    width: 100%;
+    height: 150px; /* Adjust the height to fit within the card */
+    object-fit: cover; /* Ensure the image covers the space */
+
+}
+
+.card-description {
+    padding: 10px;
+    text-align: center; /* Center align the text */
+    /* flex-grow: 1;  */
+    /* height: 0px; */
+    width: 100%;
+    height: auto;
+    display: block;
+    
+}
+
+.card-description h3 {
+    margin: 0;
+    font-size: 16px; /* Adjust the font size */
+}
+
+.card-description p {
+    margin: 5px 0 0;
+    font-size: 12px; /* Adjust the font size */
+    color: #666;
+    height: 12px;
+}
+
+/* recently added section */
+
+.recently-added {
+    padding: 20px;
+    /* background-color: red; */
+     background-color: gray; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* position: relative; */
+    margin-left: 82px;
+    margin-top: 1px;
+   
+
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.book-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.book-card {
+    /* background-color: orange; */
+    background-color: #fff;
+
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.book-card:hover {
+    transform: scale(1.05);
+}
+
+.book-description {
+    text-align: center;
+}
+
+.book-description h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.book-description p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #666;
+}
+  /* here we use a recent class if  problem appears in this write .recent{} */
+    /* margin-top: 25px; */
+    /* margin-left: 12px; */
+    /* background-color: #666; */
+     /* background-color: #007bff;  */
+
+
+
+  /* for categories */
+  .categories {
+    height: 200px;
+    width: 850px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow-y: auto; /* Allows scrolling if the content overflows */
+}
+
+h2 {
+    text-align: center;
+    /* margin-top: px; */
+
+    margin-bottom: 9px;
+}
+
+.categories-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Space between buttons */
+    align-items: center;
+    justify-content: center; /* Center the buttons horizontally */
+    height: 100%;
+    overflow-y: auto; /* Allows vertical scrolling if necessary */
+    margin-bottom: 28px;
+
+}
+
+.category-button {
+    /* background-color: #007bff; */
+    background-color: #ffffff7d;
+
+    color: black;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.category-button:hover {
+    background-color: #a0c4ea;
+}
+
+
+.card {
+    width: calc(25% - 20px); 
+    min-width: 200px; 
+    max-width: 250px; 
+    height: 300px; 
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+}
+
+.card-image {
+    width: 100%;
+    height: 150px; 
+    object-fit: cover;
+}
+
+.category-button.selected {
+    background-color: #d8dadd; 
+}
+
+.category-button {
+    
+    background-color: #dcdcdc;
+    
+    transition: background-color 0.3s;
+}
+
+.category-button:hover {
+    background-color: #a8afb5;
+}
